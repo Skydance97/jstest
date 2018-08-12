@@ -1,0 +1,21 @@
+#play-area {
+    width: 400px;
+    margin: auto;
+}
+
+#play-area div {
+    background-color: white;
+    border: 1px solid darkgrey;
+    box-sizing: border-box;
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+#play-area .snake {
+    background-color: orange;
+}
+
+#play-area .apple {
+    background-color: green;
+}
