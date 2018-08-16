@@ -34,7 +34,7 @@ function placeApple() {
 function placeSnake() {
     snake.x = Math.floor(Math.random() * area.width);
     snake.y = Math.floor(Math.random() * area.height);
-    snake.length = 5;
+    snake.length = 3;
     snake.direction = 'Up';
 }
 
@@ -92,16 +92,24 @@ function gameLoop() {
 function enterKey(event) {
     switch (event.key) {
         case 'ArrowUp':
-            snake.direction = 'Up';
+            if (snake.direction !== 'Down') {
+                snake.direction = 'Up';
+            }
             break;
         case 'ArrowDown':
-            snake.direction = 'Down';
+            if (snake.direction !== 'Up') {
+                snake.direction = 'Down';
+            }
             break;
         case 'ArrowLeft':
-            snake.direction = 'Left';
+            if (snake.direction !== 'Right') {
+                snake.direction = 'Left';
+            }
             break;
         case 'ArrowRight':
-            snake.direction = 'Right';
+            if (snake.direction !== 'Left') {
+                snake.direction = 'Right';
+            }
             break;
         default:
             break;
